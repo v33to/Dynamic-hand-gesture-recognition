@@ -1,0 +1,118 @@
+================================================================================
+GESTURE RECOGNITION MODEL BENCHMARK REPORT
+================================================================================
+
+Dataset: datasets/continuous_gestures_labeled.h5
+Total gestures: 73
+Generated: 2026-01-08 14:46:37
+
+================================================================================
+MODEL CONFIGURATIONS
+================================================================================
+
+BASELINE MODEL:
+  Description: Baseline model (pre-active learning, no explicit unknown class)
+  Model path: trained_models_initial/gesture_conv1d_quant.tflite
+  Has unknown class: False
+  Confidence threshold: 0.9
+  Entropy threshold: 0.5
+
+ENHANCED MODEL:
+  Description: Enhanced model (post-active learning, explicit unknown class)
+  Model path: trained_models/gesture_conv1d_quant.tflite
+  Has unknown class: True
+  Confidence threshold: 0.9
+  Entropy threshold: 0.5
+
+================================================================================
+RESULTS: BASELINE MODEL
+================================================================================
+
+Overall Metrics:
+  Accuracy:  0.5890
+  Precision: 0.6664
+  Recall:    0.5890
+
+Per-Class Performance:
+  Swipe Up (Class 0): 1.0000 (8 samples)
+  Swipe Down (Class 1): 0.5000 (6 samples)
+  Swipe Left (Class 2): 0.5714 (7 samples)
+  Swipe Right (Class 3): 0.8571 (7 samples)
+  Zoom In (Class 4): 0.6250 (8 samples)
+  Zoom Out (Class 5): 0.6667 (6 samples)
+  Rotate Clockwise (Class 6): 0.8000 (5 samples)
+  Rotate Counter Clockwise (Class 7): 0.8333 (6 samples)
+  Unknown (Class 8): 0.2000 (20 samples)
+
+Unknown Detection:
+  True unknowns: 20
+  Predicted unknowns: 7
+  True positives: 4
+  False positives: 3
+  False negatives: 16
+  Precision: 0.5714
+  Recall: 0.2000
+
+Confidence Statistics:
+  Mean: 0.9625 � 0.0811
+  Range: [0.5586, 0.9961]
+
+Entropy Statistics:
+  Mean: 0.0602 � 0.1122
+  Range: [0.0019, 0.5166]
+
+================================================================================
+RESULTS: ENHANCED MODEL
+================================================================================
+
+Overall Metrics:
+  Accuracy:  0.9315
+  Precision: 0.9406
+  Recall:    0.9315
+
+Per-Class Performance:
+  Swipe Up (Class 0): 1.0000 (8 samples)
+  Swipe Down (Class 1): 0.8333 (6 samples)
+  Swipe Left (Class 2): 1.0000 (7 samples)
+  Swipe Right (Class 3): 0.8571 (7 samples)
+  Zoom In (Class 4): 0.7500 (8 samples)
+  Zoom Out (Class 5): 1.0000 (6 samples)
+  Rotate Clockwise (Class 6): 1.0000 (5 samples)
+  Rotate Counter Clockwise (Class 7): 1.0000 (6 samples)
+  Unknown (Class 8): 0.9500 (20 samples)
+
+Unknown Detection:
+  True unknowns: 20
+  Predicted unknowns: 23
+  True positives: 19
+  False positives: 4
+  False negatives: 1
+  Precision: 0.8261
+  Recall: 0.9500
+
+Confidence Statistics:
+  Mean: 0.9675 � 0.0739
+  Range: [0.5820, 0.9961]
+
+Entropy Statistics:
+  Mean: 0.0450 � 0.0840
+  Range: [0.0018, 0.3464]
+
+================================================================================
+MODEL COMPARISON SUMMARY
+================================================================================
+
+Overall Metrics:
+  Baseline Model:
+    Accuracy:  0.5890
+    Precision: 0.6664
+    Recall:    0.5890
+  Enhanced Model:
+    Accuracy:  0.9315
+    Precision: 0.9406
+    Recall:    0.9315
+  Improvement:
+    Accuracy:  +0.3425 (+34.25%)
+    Precision: +0.2742 (+27.42%)
+    Recall:    +0.3425 (+34.25%)
+

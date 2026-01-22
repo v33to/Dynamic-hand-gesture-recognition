@@ -1,0 +1,5 @@
+num_classes: 8
+sequence_length: 10
+feature_size: 63
+class_names: [0, 1, 2, 3, 4, 5, 6, 7]
+model_type: Conv1D
