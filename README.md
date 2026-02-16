@@ -1,4 +1,4 @@
-# Active Learning-Driven Dynamic Hand Gesture Recognition for Resource-Constrained Devices
+# A General Pipeline for Building Custom Gesture Recognition Systems in Human-Robot Collaboration
 
 This project presents a general pipeline that can be applied for numerous applications concerning hand gesture recognition, where data collection for custom vocabularies and model improvement is facilitated using a guided approach based on active learning. Instead of proposing a novel architecture, to better balance accuracy and efficiency, a different methodology is introduced to combine deterministic heuristics for validation and ambiguity filtering with a simple lightweight model that can be continuously improved and adapted through targeted dataset enhancement.
 
